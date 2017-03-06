@@ -1,0 +1,84 @@
+<div ng-controller="UsersController">
+  <div class="container">
+    <div class="row">
+      <div class="login-form" id="login-form">
+        <form role="login">
+          <h2 class="text-center lead">Sign in to Stass</h2>
+          <div class="text-center">
+            <p>The Student Assistant (Alpha)</p>
+          </div>
+          <div class="form-group">
+              <div class="input-group">
+                  <div class="input-group-addon"><span class="text-primary glyphicon glyphicon-user"></span></div>
+                  <input type="text" name="user_name" id="login_id"  placeholder="Username" ng-model="roll_number" class="form-control login_id"/>
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="input-group">
+                  <div class="input-group-addon"><span class="text-primary glyphicon glyphicon-lock"></span></div>
+                  <input type="password" name="password" id = "password" ng-model="password" placeholder="Password" class="form-control password" />
+            </div>
+            <div class="alert alert-dismissible alert-warning fade in" ng-if="errorUser||errorPwd">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+             {{errorCredentials}}
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" name="go" class="bttn-minimal bttn-sm bttn-success btton" ng-click="login()">Sign in</button>
+          </div>
+          <div class="form-group row text-center">
+            <div class="col-sm-6">
+              <a href="" onclick="toVision()">
+                <span class="text-xs text-default">Vision</span>
+              </a>
+            </div>
+            <div class="col-sm-6">
+              <a href="" onclick="toMission()">
+                <span class="text-xs text-default">Mission</span>
+              </a>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    <div class="mission" id="mission" style="display: none">
+      <form role="login">
+        <h2 class="text-center lead">Mission</h2>
+        <p class="text-center">To promote academic excellence, widen intellectual horizons, inculcate self-discipline and high ideals for the total personality development of the individual. To convert a novice into a competent professional with excellent theoretical knowledge, unsurpassed practical/clinical skills and to motivate the interest in the research activities, further education and social services.</p>
+        <div class="form-group row text-center">
+          <div class="col-sm-6">
+            <a href="" onclick="toLogin()">
+              <span class="text-xs text-default">Login</span>
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="" onclick="toVision()">
+              <span class="text-xs text-default">Vision</span>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="vision" id="vision" style="display: none">
+      <form role="login">
+        <h2 class="text-center lead">Vision</h2>
+        <p class="text-center">To be, and to be recognized for setting the standards of excellence in professional education and high quality scientific research.</p>
+        <div class="form-group row text-center">
+          <div class="col-sm-6">
+            <a href="" onclick="toLogin()">
+              <span class="text-xs text-default">Login</span>
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="" onclick="toMission()">
+              <span class="text-xs text-default">Mission</span>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    </div>
+  </div>
+</div>

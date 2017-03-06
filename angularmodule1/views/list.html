@@ -1,0 +1,19 @@
+<div ng-controller="ListController">
+  <div class="container">
+    <div class=" panel panel-body">
+      <div class="list-group">
+        <div class="list-group-item" ng-repeat="list in lists">
+          <div class="row-action-primary">
+            <img class="img-circle" ng-src="{{list.image}}">
+          </div>
+          <div class="row-content">
+            <div class="least-content">{{list.time}}</div>
+            <h4 class="list-group-item-heading">{{list.heading}}</h4>
+            <p class="list-group-item-text">{{list.description}}</p>
+          </div>
+          <div class="list-group-separator"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

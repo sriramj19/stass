@@ -1,0 +1,384 @@
+{ 
+    "_id" : ObjectId("58aa8c6593ac43c008e65527"), 
+    "roll_number" : "admin", 
+    "password" : "nimda", 
+    "full_name" : "Sudan S", 
+    "mobile_number" : "9940547010", 
+    "email_id" : "sudansankar@gmail.com", 
+    "admin" : true, 
+    "verified" : true, 
+    "createdAt" : ISODate("2017-02-20T06:27:49.552+0000"), 
+    "updatedAt" : ISODate("2017-02-20T06:27:49.552+0000")
+}
+{ 
+    "_id" : ObjectId("58abc40c8110d0341b01d9fb"), 
+    "roll_number" : "tadmin", 
+    "password" : "nimdat", 
+    "full_name" : "Palanippan S", 
+    "mobile_number" : "9940411572", 
+    "email_id" : "seenu1996@gmail.com", 
+    "verified" : "true", 
+    "admin" : true, 
+    "createdAt" : ISODate("2017-02-21T04:37:32.201+0000"), 
+    "updatedAt" : ISODate("2017-02-21T04:37:32.201+0000")
+}
+{ 
+    "_id" : ObjectId("58abc71e8110d0341b01d9fc"), 
+    "roll_number" : "13BCS254", 
+    "password" : "13BCS254", 
+    "full_name" : "PALLAVI K", 
+    "mobile_number" : "9566289315", 
+    "email_id" : "pallavijeni25@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T04:50:38.664+0000"), 
+    "updatedAt" : ISODate("2017-02-21T04:50:38.664+0000")
+}
+{ 
+    "_id" : ObjectId("58abc8018110d0341b01d9fd"), 
+    "roll_number" : "13BCS255", 
+    "password" : "13BCS255", 
+    "full_name" : "PAVITHRAA R K", 
+    "mobile_number" : "9840491130", 
+    "email_id" : "pavithraa.krishnan@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T04:54:25.552+0000"), 
+    "updatedAt" : ISODate("2017-02-21T04:54:25.552+0000")
+}
+{ 
+    "_id" : ObjectId("58abc8568110d0341b01d9fe"), 
+    "roll_number" : "13BCS256", 
+    "password" : "13BCS256", 
+    "full_name" : "PERAM RAJESH", 
+    "mobile_number" : "9493998798", 
+    "email_id" : "rajraesh640@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T04:55:50.800+0000"), 
+    "updatedAt" : ISODate("2017-02-21T04:55:50.800+0000")
+}
+{ 
+    "_id" : ObjectId("58abc8c48110d0341b01d9ff"), 
+    "roll_number" : "13BCS257", 
+    "password" : "13BCS257", 
+    "full_name" : "POONGUZHALI P", 
+    "mobile_number" : "9940578934", 
+    "email_id" : "poojablackpoo@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T04:57:40.898+0000"), 
+    "updatedAt" : ISODate("2017-02-21T04:57:40.898+0000")
+}
+{ 
+    "_id" : ObjectId("58abc9838110d0341b01da00"), 
+    "roll_number" : "13BCS258", 
+    "password" : "13BCS258", 
+    "full_name" : "POORNIMA L", 
+    "mobile_number" : "8608071963", 
+    "email_id" : "sathiyapoonam@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:00:51.655+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:00:51.655+0000")
+}
+{ 
+    "_id" : ObjectId("58abc9f18110d0341b01da01"), 
+    "roll_number" : "13BCS260", 
+    "password" : "13BCS260", 
+    "full_name" : "PRADIESH KUMAR R", 
+    "mobile_number" : "7639590549", 
+    "email_id" : "pradieshkumar@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:02:41.723+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:02:41.723+0000")
+}
+{ 
+    "_id" : ObjectId("58abca668110d0341b01da02"), 
+    "roll_number" : "13BCS261", 
+    "password" : "13BCS261", 
+    "full_name" : "PRASANNA V", 
+    "mobile_number" : "9884040745", 
+    "email_id" : "venkatesan1411@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:04:38.798+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:04:38.798+0000")
+}
+{ 
+    "_id" : ObjectId("58abca938110d0341b01da03"), 
+    "roll_number" : "13BCS262", 
+    "password" : "13BCS262", 
+    "full_name" : "PRASANNA V", 
+    "mobile_number" : "9486350949", 
+    "email_id" : "prasanna261387@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:05:23.516+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:05:23.516+0000")
+}
+{ 
+    "_id" : ObjectId("58abcad48110d0341b01da04"), 
+    "roll_number" : "13BCS263", 
+    "password" : "13BCS263", 
+    "full_name" : "PRASANTHI V", 
+    "mobile_number" : "9791007044", 
+    "email_id" : "prasanthivaideeswaran@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:06:28.450+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:06:28.450+0000")
+}
+{ 
+    "_id" : ObjectId("58abcb348110d0341b01da05"), 
+    "roll_number" : "13BCS264", 
+    "password" : "13BCS264", 
+    "full_name" : "PRIYA N", 
+    "mobile_number" : "8220795203", 
+    "email_id" : "priya18.cse@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:08:04.836+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:08:04.836+0000")
+}
+{ 
+    "_id" : ObjectId("58abcb738110d0341b01da06"), 
+    "roll_number" : "13BCS265", 
+    "password" : "13BCS265", 
+    "full_name" : "PRIYA V", 
+    "mobile_number" : "9176623679", 
+    "email_id" : "priyavenkatesan24@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:09:07.907+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:09:07.907+0000")
+}
+{ 
+    "_id" : ObjectId("58abcbbb8110d0341b01da07"), 
+    "roll_number" : "13BCS266", 
+    "password" : "13BCS266", 
+    "full_name" : "PRIYANKA B", 
+    "mobile_number" : "9444278081", 
+    "email_id" : "priyankaboopathy01@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:10:19.129+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:10:19.129+0000")
+}
+{ 
+    "_id" : ObjectId("58abcc1e8110d0341b01da08"), 
+    "roll_number" : "13BCS267", 
+    "password" : "13BCS267", 
+    "full_name" : "PRIYANKA M", 
+    "mobile_number" : "9444812922", 
+    "email_id" : "priya.mani0196@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:11:58.340+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:11:58.340+0000")
+}
+{ 
+    "_id" : ObjectId("58abcd098110d0341b01da09"), 
+    "roll_number" : "13BCS268", 
+    "password" : "13BCS268", 
+    "full_name" : "PRIYANKA S", 
+    "mobile_number" : "9791559032", 
+    "email_id" : "priyanka.shanmugam01@gamil.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:15:53.921+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:15:53.921+0000")
+}
+{ 
+    "_id" : ObjectId("58abcd5a8110d0341b01da0a"), 
+    "roll_number" : "13BCS269", 
+    "password" : "13BCS269", 
+    "full_name" : "CHERUKURI RAGHUVARAN", 
+    "mobile_number" : "9087738813", 
+    "email_id" : "raghuchowdary330@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:17:14.015+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:17:14.015+0000")
+}
+{ 
+    "_id" : ObjectId("58abcd998110d0341b01da0b"), 
+    "roll_number" : "13BCS270", 
+    "password" : "13BCS270", 
+    "full_name" : "DEVANANDHI RAMAKANTH", 
+    "mobile_number" : "8220167992", 
+    "email_id" : "sreeramdevanandi@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:18:17.607+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:18:17.607+0000")
+}
+{ 
+    "_id" : ObjectId("58abcdd58110d0341b01da0c"), 
+    "roll_number" : "13BCS271", 
+    "password" : "13BCS271", 
+    "full_name" : "RAM KUMAR D", 
+    "mobile_number" : "7708656201", 
+    "email_id" : "ramkumar77ram@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:19:17.758+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:19:17.758+0000")
+}
+{ 
+    "_id" : ObjectId("58abce1b8110d0341b01da0d"), 
+    "roll_number" : "13BCS272", 
+    "password" : "13BCS272", 
+    "full_name" : "RANJANA.J", 
+    "mobile_number" : "9488034291", 
+    "email_id" : "ranjanajkvr@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:20:27.969+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:20:27.969+0000")
+}
+{ 
+    "_id" : ObjectId("58abce638110d0341b01da0e"), 
+    "roll_number" : "13BCS273", 
+    "password" : "13BCS273", 
+    "full_name" : "RAPHEAL ROHITH VIJAY E", 
+    "mobile_number" : "7708599679", 
+    "email_id" : "raphealrohithvijay@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:21:39.913+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:21:39.913+0000")
+}
+{ 
+    "_id" : ObjectId("58abceaf8110d0341b01da0f"), 
+    "roll_number" : "13BCS274", 
+    "password" : "13BCS274", 
+    "full_name" : "REDDIVARI SAI POOJITHA", 
+    "mobile_number" : "7702827930", 
+    "email_id" : "saipoojitha512@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:22:55.997+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:22:55.997+0000")
+}
+{ 
+    "_id" : ObjectId("58abcfae8110d0341b01da10"), 
+    "roll_number" : "13BCS275", 
+    "password" : "13BCS275", 
+    "full_name" : "RESHMA R", 
+    "mobile_number" : "9894187643", 
+    "email_id" : "mailtoreshu.rr@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:27:10.996+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:27:10.996+0000")
+}
+{ 
+    "_id" : ObjectId("58abcfe08110d0341b01da11"), 
+    "roll_number" : "13BCS276", 
+    "password" : "13BCS276", 
+    "full_name" : "REVANTH KUMAR R", 
+    "mobile_number" : "9659393509", 
+    "email_id" : "revanthh3@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:28:00.687+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:28:00.687+0000")
+}
+{ 
+    "_id" : ObjectId("58abd00e8110d0341b01da12"), 
+    "roll_number" : "13BCS277", 
+    "password" : "13BCS277", 
+    "full_name" : "BORANCHU RUSHI KESH REDDY", 
+    "mobile_number" : "7090312596", 
+    "email_id" : "rushirushikesh3@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:28:46.329+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:28:46.329+0000")
+}
+{ 
+    "_id" : ObjectId("58abd0498110d0341b01da13"), 
+    "roll_number" : "13BCS278", 
+    "password" : "13BCS278", 
+    "full_name" : "SAALEHA AAFREEN A", 
+    "mobile_number" : "9840480800", 
+    "email_id" : "saalehaafreen@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:29:45.917+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:29:45.917+0000")
+}
+{ 
+    "_id" : ObjectId("58abd0738110d0341b01da14"), 
+    "roll_number" : "13BCS279", 
+    "password" : "13BCS279", 
+    "full_name" : "SABARI C", 
+    "mobile_number" : "9790133551", 
+    "email_id" : "sabarichettiyappan@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:30:27.926+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:30:27.926+0000")
+}
+{ 
+    "_id" : ObjectId("58abd0ab8110d0341b01da15"), 
+    "roll_number" : "13BCS280", 
+    "password" : "13BCS280", 
+    "full_name" : "SANDHIYA B", 
+    "mobile_number" : "984116324", 
+    "email_id" : "sandhiya.baskar52gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:31:23.941+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:31:23.941+0000")
+}
+{ 
+    "_id" : ObjectId("58abd0dd8110d0341b01da16"), 
+    "roll_number" : "13BCS281", 
+    "password" : "13BCS281", 
+    "full_name" : "SARATHBABU.R", 
+    "mobile_number" : "8220771755", 
+    "email_id" : "sarathbabu828@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:32:13.602+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:32:13.602+0000")
+}
+{ 
+    "_id" : ObjectId("58abd1228110d0341b01da17"), 
+    "roll_number" : "13BCS282", 
+    "password" : "13BCS282", 
+    "full_name" : "SATHYALAKSHMI A", 
+    "mobile_number" : "9444138859", 
+    "email_id" : "sathyalakshmi0507@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:33:22.878+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:33:22.878+0000")
+}
+{ 
+    "_id" : ObjectId("58abd1988110d0341b01da18"), 
+    "roll_number" : "13BCS284", 
+    "password" : "13BCS284", 
+    "full_name" : "SHRESHTA V", 
+    "mobile_number" : "9840232664", 
+    "email_id" : "shreshtashruthi@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:35:20.876+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:35:20.876+0000")
+}
+{ 
+    "_id" : ObjectId("58abd1cb8110d0341b01da19"), 
+    "roll_number" : "13BCS285", 
+    "password" : "13BCS285", 
+    "full_name" : "SHYAM SUJITH M", 
+    "mobile_number" : "9176835838", 
+    "email_id" : "mshyamsujith@gmail.com", 
+    "verified" : "true", 
+    "admin" : false, 
+    "createdAt" : ISODate("2017-02-21T05:36:11.873+0000"), 
+    "updatedAt" : ISODate("2017-02-21T05:36:11.873+0000")
+}

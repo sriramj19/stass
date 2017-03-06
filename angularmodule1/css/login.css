@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+
+.login-form {
+	margin: 100px auto;
+	max-width: 400px;
+}
+
+.forgot-password {
+	margin: 100px auto;
+	max-width: 400px;
+}
+
+.register-form {
+	margin: 100px auto;
+	max-width: 500px;
+}
+
+.guest-user {
+	margin: 100px auto;
+	max-width: 400px;
+}
+
+.numberCircle {
+    display:inline-block;
+
+    border-radius:50%;
+    border:2px solid;
+
+    font-size:12px;
+}
+
+.numberCircle:before,
+.numberCircle:after {
+    content:'\200B';
+    display:inline-block;
+    line-height:0px;
+
+    padding-top:50%;
+    padding-bottom:50%;
+}
+
+.numberCircle:before {
+    padding-left:8px;
+}
+.numberCircle:after {
+    padding-right:8px;
+}
+
+form[role=login] {
+	padding: 15px 26px 20px 26px;
+	background: #fff;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+	form[role=login] h2 {
+		font-size: 20px;
+		color: #5d5c5c;
+		margin-bottom: 0.5em;
+	}
+	form[role=login] p {
+		color: #929292;
+		margin-bottom: 25px;
+	}
+
+  form[role=login] .btton {
+    font-family: sans-serif;
+  }
+  form[role=login] .small-btton {
+    font-size: 10px;
+  }
