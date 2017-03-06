@@ -13,7 +13,10 @@ module.exports = {
     },
     stop_id:  {
       model:  'stoppoint'
+    },
+    feeStatus : {
+      type : 'boolean',
+      defaultsTo : 'false'
     }
-
   }
 };

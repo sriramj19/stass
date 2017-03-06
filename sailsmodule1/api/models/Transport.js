@@ -13,6 +13,14 @@ module.exports = {
     },
     bus_route:  {
       type: 'string'
+    },
+    status : {
+      type : 'boolean',
+      defaultsTo : 'true'
+    },
+    comments : {
+      type : 'string',
+      defaultsTo : 'No comments'
     }
 
   }

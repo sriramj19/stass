@@ -46,7 +46,10 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'post /generateAccount'                   :'UseraccountController.createAccount',
+  'post /generateAccount'                   :'UseraccountController.generateAccount',
+  'put /createAccount'                      :'UseraccountController.createAccount',
+  'post /findAccountByRollNumber'           :'UseraccountController.findAccountByRollNumber',
+  'post /authenticate'                      :'UseraccountController.authenticate',
 
 
 
@@ -60,8 +63,11 @@ module.exports.routes = {
 
 
 
-  'post /createBusInfo'                     :'BusinfoController.createBusInfo',      
+  'post /createBusInfo'                     :'BusinfoController.createBusInfo',
 
+
+
+  'post /signupForTransport'                :'BustransactionController.signupForTransport',
 
 
 
