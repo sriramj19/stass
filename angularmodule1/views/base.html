@@ -1,24 +1,23 @@
 <div class="ui-base">
-	<div class="navbar navbar-info">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="">Stass</a>
-      </div>
+	<div class="navbar navbar-inverse" style="background-color: #3ba9a6">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navtomenu">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="" class="navbar-brand" ng-click="app.homepage()">Stass</a>
+			</div>
 			<div class="navbar-collapse collapse" id="navtomenu">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a class="btn btn-lg" href="">About</a></li>
-					<li><a class="btn btn-lg" ng-if="app.user_details" ng-click="app.myWishlist()" href="">My Details</a></li>
+					<li><a class="btn btn-lg" ng-if="app.user_details.verified" ng-click="app.profile()" href="">My Profile</a></li>
 					<li><a class="btn btn-warning btn-lg" ng-if="app.user_details" ng-click="app.logout()" href="">
 						<span class="glyphicon glyphicon-log-out "></span> Log out
 					</a></li>
 				</ul>
 			</div>
-    </div>
-  </div>
-	<div ui-view />
+		</div>
+	</div>
+<div ui-view />
 </div>

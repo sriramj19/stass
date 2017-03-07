@@ -18,8 +18,8 @@
                   <div class="input-group-addon"><span class="text-primary glyphicon glyphicon-lock"></span></div>
                   <input type="password" name="password" id = "password" ng-model="password" placeholder="Password" class="form-control password" />
             </div>
-            <div class="alert alert-dismissible alert-warning fade in" ng-if="errorUser||errorPwd">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <div class="alert alert-dismissible alert-warning fade in" ng-if="errorCredentials">
+              <button type="button" class="close" data-dismiss="alert" ng-click="dismissErrorCred()">&times;</button>
              {{errorCredentials}}
             </div>
           </div>

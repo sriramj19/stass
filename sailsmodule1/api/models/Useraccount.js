@@ -28,7 +28,8 @@ module.exports = {
       defaultsTo:  false
     },
     verified: {
-
+      type: 'boolean',
+      defaultsTo:  false
     }
   }
 };

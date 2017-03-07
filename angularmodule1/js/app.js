@@ -39,4 +39,48 @@ angular.module('app', [
         }
       }
     })
+    .state('homepage', {
+        url: '/homepage',
+        parent: 'base',
+        templateUrl: 'views/homepage.html',
+        controller : function($state) {
+          $state.go('myTransport');
+        },
+        resolve: { homepage: function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'app',
+            files: ['js/controllers/UsersController.js']
+          })
+        }
+      }
+    })
+    .state('dashboard', {
+        url: '/dashboard',
+        parent: 'base',
+        templateUrl: 'views/dashboard.html',
+        controller : function($scope) {
+          if(!$scope.app.user_details.admin) {
+            $state.go('homepage');
+          }
+        },
+        resolve: { dashboard: function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'app',
+            files: ['js/controllers/UsersController.js']
+          })
+        }
+      }
+    })
+    .state('register', {
+        url: '/register',
+        parent: 'base',
+        templateUrl: 'views/register.html',
+        resolve: { register: function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'app',
+            files: ['js/controllers/UsersController.js']
+          })
+        }
+      }
+    })
 }]);

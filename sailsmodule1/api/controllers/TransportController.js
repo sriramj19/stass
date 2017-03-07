@@ -16,5 +16,15 @@ module.exports = {
 				}
 		});
 	},
-	
+
+	getAllRoutes : function(req, res) {
+		Transport.find().exec(function(err, response) {
+			if(err)	return console.log(err);
+
+			if(response.length) {
+				return res.json(response);
+			}
+		})
+	},
+
 };

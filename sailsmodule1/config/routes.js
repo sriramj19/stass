@@ -54,6 +54,7 @@ module.exports.routes = {
 
 
   'post /createTransport'                   :'TransportController.createTransport',
+  'get /getAllRoutes'                       :'TransportController.getAllRoutes',
 
 
 

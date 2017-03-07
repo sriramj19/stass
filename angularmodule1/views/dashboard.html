@@ -1,0 +1,20 @@
+<div ng-controller="TransportController" ng-init="getRoutes()">
+  <div class="container">
+    <div class="col-sm-offset-4 col-sm-4">
+      <button type="button" name="routes" ng-click="viewRoutes()">View all routes</button>
+      <button type="button" name="students">View students</button>
+    </div>
+    <div class=" panel panel-body" style="display:none" id="transportData">
+      <div class="list-group">
+        <div class="list-group-item" ng-repeat="list in transportData">
+          <div class="row-content">
+            <h4 class="list-group-item-heading">{{list.bus_route}}</h4>
+            <span class="pull-right">View</span>
+            <p class="list-group-item-text">{{list.bus_number}}</p>
+          </div>
+          <div class="list-group-separator"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

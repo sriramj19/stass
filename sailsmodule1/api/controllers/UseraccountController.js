@@ -23,15 +23,15 @@ module.exports = {
 
 			if(response) {
 				if(response.password === req.param('password')) {
-					delete response.password
+					delete response.password;
 					return res.json(response);
 				}
 				else {
-					return res.json({error : 'Password incorrect...'});
+					return res.status(400).json({error : 'Password incorrect...'});
 				}
 			}
 			else {
-				return res.json({error : 'Username incorrect...'});
+				return res.status(400).json({error : 'Username incorrect...'});
 			}
 		});
 	},
