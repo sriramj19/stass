@@ -215,3 +215,11 @@
     "createdAt" : ISODate("2017-02-21T16:02:23.561+0000"), 
     "updatedAt" : ISODate("2017-02-21T16:02:23.561+0000")
 }
+{ 
+    "_id" : ObjectId("58c2a1499f66d3e45a3f912d"), 
+    "profile_id" : ObjectId("58bec39fd7570d68176649b8"), 
+    "bus_id" : ObjectId("58abd7178110d0341b01da1f"), 
+    "status" : true, 
+    "createdAt" : ISODate("2017-03-10T12:51:21.695+0000"), 
+    "updatedAt" : ISODate("2017-03-10T12:51:21.695+0000")
+}

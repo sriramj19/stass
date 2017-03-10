@@ -1,7 +1,15 @@
 <div ng-controller="TransportController" ng-init="checkTransport()">
-  <p>Name : {{studentTransportData.profile_id.full_name}}</p>
-  <p>Mobile Number : {{studentTransportData.profile_id.mobile_number}}</p>
-  <p>Route : {{studentTransportData.bus_details.bus_route}}</p>
-  <p>Boarding Point : {{studentTransportData.stop_details.boarding_point}}</p>
-  <p>Boarding Time : {{studentTransportData.stop_details.boarding_time}}</p>
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <p>Name : {{studentTransportData.profile_id.full_name}}</p>
+        <p>Mobile Number : {{studentTransportData.profile_id.mobile_number}}</p>
+        <p>Route : {{studentTransportData.bus_details.bus_route}}</p>
+        <p>Boarding Point : {{studentTransportData.stop_details.boarding_point}}</p>
+        <p>Boarding Time : {{studentTransportData.stop_details.boarding_time}}</p>
+        <p>Comments : {{studentTransportData.bus_details.comments}}</p>
+        <button type="button" name="button" ng-click="goToViewTransport()"> View Bus routes</button>
+      </div>
+    </div>
+  </div>
 </div>

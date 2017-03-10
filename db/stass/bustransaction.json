@@ -1,18 +1,288 @@
 { 
-    "_id" : ObjectId("58c1c084c735737c1a6db015"), 
+    "_id" : ObjectId("58c2c54457563bd40ce0e170"), 
+    "profile_id" : ObjectId("58aa8c6593ac43c008e65527"), 
+    "bus_details" : ObjectId("58aab083a4fbfbec2edc898e"), 
+    "stop_details" : ObjectId("58aab083a4fbfbec2edc898e"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.967+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.967+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e171"), 
     "profile_id" : ObjectId("58abc71e8110d0341b01d9fc"), 
     "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
     "stop_details" : ObjectId("58abd64d8110d0341b01da1d"), 
-    "feeStatus" : false, 
-    "createdAt" : ISODate("2017-03-09T20:52:20.897+0000"), 
-    "updatedAt" : ISODate("2017-03-09T20:52:20.897+0000")
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.972+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.972+0000")
 }
 { 
-    "_id" : ObjectId("58c1cd246360c6141884c14c"), 
+    "_id" : ObjectId("58c2c54457563bd40ce0e172"), 
+    "profile_id" : ObjectId("58abc8c48110d0341b01d9ff"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd6c38110d0341b01da1e"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.973+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.973+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e173"), 
+    "profile_id" : ObjectId("58abca668110d0341b01da02"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd7408110d0341b01da20"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.974+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.974+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e174"), 
+    "profile_id" : ObjectId("58abcb348110d0341b01da05"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd7408110d0341b01da20"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.975+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.975+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e175"), 
+    "profile_id" : ObjectId("58abcc1e8110d0341b01da08"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd7408110d0341b01da20"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.976+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.976+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e176"), 
+    "profile_id" : ObjectId("58abcd998110d0341b01da0b"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd7768110d0341b01da22"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.976+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.976+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e177"), 
+    "profile_id" : ObjectId("58abce638110d0341b01da0e"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd7968110d0341b01da24"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.977+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.977+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e178"), 
+    "profile_id" : ObjectId("58abcfe08110d0341b01da11"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd7ab8110d0341b01da25"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.979+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.979+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e179"), 
+    "profile_id" : ObjectId("58abd0738110d0341b01da14"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd7e28110d0341b01da27"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.980+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.980+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e17a"), 
+    "profile_id" : ObjectId("58abd1228110d0341b01da17"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd7e28110d0341b01da27"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.981+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.981+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e17b"), 
+    "profile_id" : ObjectId("58abc8018110d0341b01d9fd"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abda098110d0341b01da2d"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.981+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.981+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e17c"), 
+    "profile_id" : ObjectId("58abc9838110d0341b01da00"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abd9c18110d0341b01da2a"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.982+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.982+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e17d"), 
+    "profile_id" : ObjectId("58abca938110d0341b01da03"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abd9f08110d0341b01da2c"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.982+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.982+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e17e"), 
+    "profile_id" : ObjectId("58abcb738110d0341b01da06"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abda318110d0341b01da2f"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.982+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.982+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e17f"), 
+    "profile_id" : ObjectId("58abcd098110d0341b01da09"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abda318110d0341b01da2f"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.982+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.982+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e180"), 
+    "profile_id" : ObjectId("58abcdd58110d0341b01da0c"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abda098110d0341b01da2d"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.983+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.983+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e181"), 
+    "profile_id" : ObjectId("58abceaf8110d0341b01da0f"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abda098110d0341b01da2d"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.983+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.983+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e182"), 
+    "profile_id" : ObjectId("58abd00e8110d0341b01da12"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abda1c8110d0341b01da2e"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.984+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.984+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e183"), 
+    "profile_id" : ObjectId("58abd0ab8110d0341b01da15"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abda408110d0341b01da30"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.984+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.984+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e184"), 
+    "profile_id" : ObjectId("58abd1988110d0341b01da18"), 
+    "bus_details" : ObjectId("58abd2678110d0341b01da1b"), 
+    "stop_details" : ObjectId("58abda408110d0341b01da30"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.984+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.984+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e185"), 
+    "profile_id" : ObjectId("58abc8568110d0341b01d9fe"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdab08110d0341b01da33"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.988+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.988+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e186"), 
+    "profile_id" : ObjectId("58abc9f18110d0341b01da01"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdb008110d0341b01da35"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.989+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.989+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e187"), 
+    "profile_id" : ObjectId("58abcad48110d0341b01da04"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdb008110d0341b01da35"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.989+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.989+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e188"), 
+    "profile_id" : ObjectId("58abcbbb8110d0341b01da07"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdbde8110d0341b01da36"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.989+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.989+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e189"), 
+    "profile_id" : ObjectId("58abcd5a8110d0341b01da0a"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdc5a8110d0341b01da3b"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.990+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.990+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e18a"), 
+    "profile_id" : ObjectId("58abce1b8110d0341b01da0d"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdbee8110d0341b01da37"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.990+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.990+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e18b"), 
+    "profile_id" : ObjectId("58abcfae8110d0341b01da10"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdc378110d0341b01da3a"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.994+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.994+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e18c"), 
+    "profile_id" : ObjectId("58abd0498110d0341b01da13"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdc718110d0341b01da3c"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.994+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.994+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e18d"), 
+    "profile_id" : ObjectId("58abd0dd8110d0341b01da16"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdc718110d0341b01da3c"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.994+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.994+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e18e"), 
     "profile_id" : ObjectId("58abd1cb8110d0341b01da19"), 
     "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
     "stop_details" : ObjectId("58abdcee8110d0341b01da3e"), 
     "feeStatus" : true, 
-    "createdAt" : ISODate("2017-03-09T21:46:12.960+0000"), 
-    "updatedAt" : ISODate("2017-03-09T21:46:12.960+0000")
+    "createdAt" : ISODate("2017-03-10T15:24:52.997+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.997+0000")
+}
+{ 
+    "_id" : ObjectId("58c2c54457563bd40ce0e18f"), 
+    "profile_id" : ObjectId("58bec39fd7570d68176649b8"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd7178110d0341b01da1f"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-10T15:24:52.998+0000"), 
+    "updatedAt" : ISODate("2017-03-10T15:24:52.998+0000")
 }

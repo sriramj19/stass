@@ -56,6 +56,8 @@ module.exports.routes = {
 
   'post /createTransport'                   :'TransportController.createTransport',
   'get /getAllRoutes'                       :'TransportController.getAllRoutes',
+  'post /deactivateBus'                     :'TransportController.deactivateBus',
+  'get /resetTransport'                     :'TransportController.resetTransport',
 
 
 
@@ -74,6 +76,6 @@ module.exports.routes = {
   'post /signupForTransport'                :'BustransactionController.signupForTransport',
   'post /updateFeeStatus'                   :'BustransactionController.updateFeeStatus',
 
-
+  'post /cron/shiftInfoTransaction'         : 'BusinfoController.shiftI2T',
 
 };

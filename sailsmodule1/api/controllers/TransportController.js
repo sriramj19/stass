@@ -27,4 +27,31 @@ module.exports = {
 		})
 	},
 
+	deactivateBus : function(req, res) {
+		var comments = req.param('comments')||"Bus cancelled";
+		Transport.update({id : req.param('id')},{status : false, comments : comments}).exec(function(err, response) {
+			if(err)	return console.log(err);
+
+			if(response.length) {
+				return res.json(response);
+			}
+			else {
+				return res.status(404).json({error : "transport not found"});
+			}
+		});
+	},
+
+	resetTransport : function(req, res) {
+		Transport.update({}, {status : true, comments : "No comments"}).exec(function(err, response) {
+			if(err)	return console.log(err);
+
+			if(response.length) {
+				return res.json(response);
+			}
+			else {
+				return res.status(404).json({error : "transport not found"});
+			}
+		});
+	}
+
 };

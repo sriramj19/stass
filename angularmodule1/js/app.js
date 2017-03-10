@@ -63,6 +63,25 @@ angular.module('app', [
       }
     })
 
+    .state('viewTransport', {
+        url: '/viewTransport',
+        parent: 'base',
+        templateUrl: 'views/viewTransport.html',
+        controller : function($scope, $state) {
+          if(!$scope.app.user_details) {
+            $state.go('login');
+          }
+        },
+        resolve: { viewTransport: function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'app',
+            files: ['js/controllers/TransportController.js']
+          })
+        }
+      }
+    })
+
+
     .state('myTransport', {
         url: '/myTransport',
         parent: 'base',

@@ -77,4 +77,30 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
     }
   }
 
+  $scope.goToViewTransport = function() {
+    $state.go('viewTransport');
+  }
+
+  $scope.removeTransport = function(id) {
+    var flag = confirm('Do you want to cancel the bus?');
+    if(flag) {
+      $http.post($scope.app.apiURL + 'deactivateBus', {id : id}).then(function(response){
+        alert('Transport Cancelled');
+        $state.reload();
+      }, function(x) {
+        console.log(x.data.error);
+      });
+    }
+
+  }
+
+  $scope.resetTransport = function() {
+    $http.get($scope.app.apiURL + 'resetTransport').then(function(response) {
+      alert('Transport reset');
+      $state.reload();
+    }, function(x) {
+      console.log(x.data.error);
+    });
+  }
+
 }]);

@@ -11,16 +11,14 @@ module.exports = {
     });
   },
   updateFeeStatus : function(req, res) {
-    Bustransaction.update({id : req.param('id')}, {feeStatus : true}).exec(function(responseTransaction) {
+    Bustransaction.update({id : req.param('id')}, {feeStatus : true}).exec(function(err, responseTransaction) {
         if(err) return console.log(err);
 
         if(responseTransaction.length) {
-          Businfo.create({profile_id : responseTransaction.profile_id, bus_id : responseTransaction.stop_details}).exec(function(response) {
+          Businfo.create({profile_id : responseTransaction[0].profile_id, bus_id : responseTransaction[0].stop_details}).exec(function(response) {
             if(err) return console.log(err);
 
-            if(response) {
-              return res.json(response);
-            }
+            return res.json(response);
           });
         }
         else {
