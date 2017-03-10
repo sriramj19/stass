@@ -1,28 +1,36 @@
 { 
-    "_id" : ObjectId("58aa90312da02624133d763b"), 
-    "bus_number" : "301", 
-    "bus_route" : "Manali", 
-    "createdAt" : ISODate("2017-02-20T06:44:01.790+0000"), 
-    "updatedAt" : ISODate("2017-02-20T06:44:01.790+0000")
-}
-{ 
     "_id" : ObjectId("58abd2408110d0341b01da1a"), 
     "bus_number" : "302", 
     "bus_route" : "Choolai", 
     "createdAt" : ISODate("2017-02-21T05:38:08.488+0000"), 
-    "updatedAt" : ISODate("2017-02-21T05:38:08.488+0000")
+    "updatedAt" : ISODate("2017-02-21T05:38:08.488+0000"), 
+    "status" : true, 
+    "comments" : "No comments"
 }
 { 
     "_id" : ObjectId("58abd2678110d0341b01da1b"), 
     "bus_number" : "303", 
     "bus_route" : "MKB Nagar", 
     "createdAt" : ISODate("2017-02-21T05:38:47.280+0000"), 
-    "updatedAt" : ISODate("2017-02-21T05:38:47.280+0000")
+    "updatedAt" : ISODate("2017-02-21T05:38:47.280+0000"), 
+    "status" : true, 
+    "comments" : "No comments"
 }
 { 
     "_id" : ObjectId("58abd27b8110d0341b01da1c"), 
     "bus_number" : "304", 
     "bus_route" : "TVK Nagar", 
     "createdAt" : ISODate("2017-02-21T05:39:07.441+0000"), 
-    "updatedAt" : ISODate("2017-02-21T05:39:07.441+0000")
+    "updatedAt" : ISODate("2017-02-21T05:39:07.441+0000"), 
+    "status" : true, 
+    "comments" : "No comments"
+}
+{ 
+    "_id" : ObjectId("58c1c100c735737c1a6db016"), 
+    "bus_number" : "301", 
+    "bus_route" : "Manali", 
+    "status" : true, 
+    "comments" : "No comments", 
+    "createdAt" : ISODate("2017-03-09T20:54:24.717+0000"), 
+    "updatedAt" : ISODate("2017-03-09T20:54:24.717+0000")
 }

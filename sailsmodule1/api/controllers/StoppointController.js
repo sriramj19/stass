@@ -25,4 +25,16 @@ module.exports = {
 			}
 		});
 	},
+	getAllStopPoints : function(req, res) {
+		Stoppoint.find({transport_id : req.param('id')}).exec(function(err, response) {
+			if(err)	return console.log(err);
+
+			if(response.length) {
+				return res.json(response);
+			}
+			else {
+				return res.status(404).json({error : "No stoppoints found"});
+			}
+		});
+	},
 };

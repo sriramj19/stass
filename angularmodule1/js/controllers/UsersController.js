@@ -3,14 +3,14 @@
 var app = angular.module('app');
 
 app.controller('UsersController', ['$scope', '$http', '$state', '$localStorage', function($scope, $http, $state, $localStorage) {
-  $scope.checkLocal = function() {
-    if($localStorage.userDetails) {
-      $scope.app.user_details = $localStorage.userDetails;
-    } else {
-      $scope.app.logout();
-    }
-  }
-  $scope.checkLocal();
+  // $scope.checkLocal = function() {
+  //   if($localStorage.userDetails) {
+  //     $scope.app.user_details = $localStorage.userDetails;
+  //   } else {
+  //     $scope.app.logout();
+  //   }
+  // }
+  // $scope.checkLocal();
 
   $scope.login = function() {
     $http.post($scope.app.apiURL + 'authenticate', {roll_number : $scope.roll_number, password : $scope.password}).then(function(response) {
@@ -19,7 +19,7 @@ app.controller('UsersController', ['$scope', '$http', '$state', '$localStorage',
         if(response.data.admin) {
           $state.go('dashboard');
         } else {
-          $state.go('homepage');
+          $state.go('myTransport');
         }
       } else {
         $state.go('register');
@@ -47,7 +47,7 @@ app.controller('UsersController', ['$scope', '$http', '$state', '$localStorage',
           };
           $http.put($scope.app.apiURL + 'createAccount', accountDetails).then(function(response) {
             $localStorage.userDetails = $scope.app.user_details = response.data;
-            $state.go('homepage');
+            $state.go('myTransport');
           }, function(x) {
             console.log(response.data.error);
           });

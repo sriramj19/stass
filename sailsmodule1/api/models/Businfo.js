@@ -11,12 +11,12 @@ module.exports = {
     profile_id: {
       model:  'useraccount'
     },
-    stop_id:  {
+    bus_id:  {
       model:  'stoppoint'
     },
-    feeStatus : {
+    status : {
       type : 'boolean',
-      defaultsTo : 'false'
+      defaultsTo : 'true'
     }
   }
 };

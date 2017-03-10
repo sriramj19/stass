@@ -62,5 +62,24 @@ module.exports = {
 				return res.json({error : 'Username is invalid...'})
 			}
 		});
+	},
+
+	checkIfTransportExists : function(req, res) {
+		Bustransaction.findOne({profile_id : req.param('id')}).populate('profile_id').populate('bus_details').populate('stop_details').exec(function(err, responseInfo) {
+			if(err)	return console.log(err);
+
+			if(responseInfo) {
+				if(responseInfo.feeStatus) {
+					delete responseInfo.id;
+					return res.json(responseInfo);
+				}
+				else {
+					return res.status(400).json({errorNullFee : 'You have not paid your fees yet, you cannot access this page'});
+				}
+			}
+			else {
+				return res.status(400).json({errorNoData : 'You have not enrolled for transport yet, you cannot access this page'});
+			}
+		});
 	}
 };

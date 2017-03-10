@@ -382,3 +382,15 @@
     "createdAt" : ISODate("2017-02-21T05:36:11.873+0000"), 
     "updatedAt" : ISODate("2017-02-21T05:36:11.873+0000")
 }
+{ 
+    "_id" : ObjectId("58bec39fd7570d68176649b8"), 
+    "roll_number" : "13BCS286", 
+    "password" : "13bcs286", 
+    "admin" : false, 
+    "verified" : true, 
+    "createdAt" : ISODate("2017-03-07T14:28:47.546+0000"), 
+    "updatedAt" : ISODate("2017-03-07T14:37:17.005+0000"), 
+    "full_name" : "Sivedham", 
+    "email_id" : "sivedha@gmail.com", 
+    "mobile_number" : "98653221457"
+}

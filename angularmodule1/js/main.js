@@ -7,8 +7,9 @@ angular.module('app')
       name: 'Angular-Starter',
       version: '1.0.0',
       apiURL: 'http://localhost:1337/',
-      logout : function($localStorage, $state) {
+      logout : function() {
         $localStorage.$reset();
+        delete $scope.app.user_details;
         $state.go('login');
       },
       profile : function() {

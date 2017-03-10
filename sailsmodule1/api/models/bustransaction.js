@@ -1,7 +1,8 @@
 module.exports = {
   attributes : {
     profile_id : {
-      model : 'useraccount'
+      model : 'useraccount',
+      unique : true
     },
     bus_details : {
       model : 'transport'

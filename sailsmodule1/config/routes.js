@@ -50,6 +50,7 @@ module.exports.routes = {
   'put /createAccount'                      :'UseraccountController.createAccount',
   'post /findAccountByRollNumber'           :'UseraccountController.findAccountByRollNumber',
   'post /authenticate'                      :'UseraccountController.authenticate',
+  'post /checkIfTransportExists'            :'UseraccountController.checkIfTransportExists',
 
 
 
@@ -60,15 +61,18 @@ module.exports.routes = {
 
   'post /createBoardPoint'                  :'StoppointController.createBoardPoint',
   'post /findBoardPoint'                    :'StoppointController.findBoardPoint',
+  'post /getAllStopPoints'                 :'StoppointController.getAllStopPoints',
 
 
 
 
   'post /createBusInfo'                     :'BusinfoController.createBusInfo',
+  'post /getAllStudentsTravels'                 :'BusinfoController.getAllStudentsTravels',
 
 
 
   'post /signupForTransport'                :'BustransactionController.signupForTransport',
+  'post /updateFeeStatus'                   :'BustransactionController.updateFeeStatus',
 
 
 

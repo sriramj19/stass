@@ -1,0 +1,18 @@
+{ 
+    "_id" : ObjectId("58c1c084c735737c1a6db015"), 
+    "profile_id" : ObjectId("58abc71e8110d0341b01d9fc"), 
+    "bus_details" : ObjectId("58abd27b8110d0341b01da1c"), 
+    "stop_details" : ObjectId("58abd64d8110d0341b01da1d"), 
+    "feeStatus" : false, 
+    "createdAt" : ISODate("2017-03-09T20:52:20.897+0000"), 
+    "updatedAt" : ISODate("2017-03-09T20:52:20.897+0000")
+}
+{ 
+    "_id" : ObjectId("58c1cd246360c6141884c14c"), 
+    "profile_id" : ObjectId("58abd1cb8110d0341b01da19"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdcee8110d0341b01da3e"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-09T21:46:12.960+0000"), 
+    "updatedAt" : ISODate("2017-03-09T21:46:12.960+0000")
+}
