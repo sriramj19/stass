@@ -1,12 +1,4 @@
 { 
-    "_id" : ObjectId("58aab083a4fbfbec2edc898e"), 
-    "transport_id" : ObjectId("58aab083a4fbfbec2edc898e"), 
-    "boarding_point" : "Welding Shop", 
-    "boarding_time" : "7.00 AM", 
-    "createdAt" : ISODate("2017-02-20T09:01:55.278+0000"), 
-    "updatedAt" : ISODate("2017-02-20T09:01:55.278+0000")
-}
-{ 
     "_id" : ObjectId("58abd64d8110d0341b01da1d"), 
     "transport_id" : ObjectId("58abd27b8110d0341b01da1c"), 
     "boarding_point" : "TVK Nagar bus stand", 

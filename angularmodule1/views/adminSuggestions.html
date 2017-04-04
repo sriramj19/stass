@@ -1,0 +1,46 @@
+<div ng-controller="TransportController" ng-init="getSuggestions()">
+  <div class="container">
+    <div id="suggestionData">
+      <div class="row">
+        <div class="text-center">
+          <h3 class="lead">Suggestions</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="panel-group">
+          <div class="panel panel-default" ng-repeat="suggestion in suggestionData">
+            <div class="panel-heading" ng-if="suggestion.readRecipient" style="background-color: #ffffff">
+              <h4 class="panel-title">
+                <a data-toggle="modal" data-target="#message" href="" ng-click="readAction(suggestion)">Student Name : {{suggestion.profile_id.full_name}}</a>
+                <a class="pull-right small">{{suggestion.createdAt | date : 'dd MMM'}} '{{suggestion.createdAt | date : 'yy'}}</a>
+              </h4>
+            </div>
+            <div class="panel-heading" ng-if="!suggestion.readRecipient" style="background-color: #3ba9a6">
+              <h4 class="panel-title">
+                <a data-toggle="modal" data-target="#message" href="" ng-click="readAction(suggestion)">Student Name : {{suggestion.profile_id.full_name}}</a>
+                <a class="pull-right small">{{suggestion.createdAt | date : 'dd MMM'}} '{{suggestion.createdAt | date : 'yy'}}</a>
+              </h4>
+            </div>
+            <div class="modal fade" id="message" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center lead">Full Name : {{suggestion.profile_id.full_name}}</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h5 text-center>{{noteData}}</h3>
+                  </div>
+                  <div class="model-footer">
+                    <h4 class="lead text-center">Bus Route : {{suggestion.bus_route}}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer">Route : {{suggestion.bus_route}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

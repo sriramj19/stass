@@ -33,7 +33,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr ng-repeat="stop in stopData">
+                        <tr ng-repeat="stop in stopData | filter : search">
                           <td>{{stop.boarding_point}}</td>
                           <td>{{stop.boarding_time}}</td>
                         </tr>

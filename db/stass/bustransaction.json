@@ -286,3 +286,12 @@
     "createdAt" : ISODate("2017-03-10T15:24:52.998+0000"), 
     "updatedAt" : ISODate("2017-03-10T15:24:52.998+0000")
 }
+{ 
+    "_id" : ObjectId("58c786ff97f4b67806486b72"), 
+    "profile_id" : ObjectId("58c783c897f4b67806486b71"), 
+    "bus_details" : ObjectId("58abd2408110d0341b01da1a"), 
+    "stop_details" : ObjectId("58abdb008110d0341b01da35"), 
+    "feeStatus" : true, 
+    "createdAt" : ISODate("2017-03-14T06:00:31.052+0000"), 
+    "updatedAt" : ISODate("2017-03-14T06:00:31.052+0000")
+}

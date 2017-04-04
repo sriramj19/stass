@@ -26,7 +26,7 @@ module.exports = {
 		});
 	},
 	getAllStopPoints : function(req, res) {
-		Stoppoint.find({transport_id : req.param('id')}).exec(function(err, response) {
+		Stoppoint.find({transport_id : req.param('id')}).populate('transport_id').exec(function(err, response) {
 			if(err)	return console.log(err);
 
 			if(response.length) {

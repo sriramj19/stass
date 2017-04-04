@@ -4,6 +4,10 @@ var app = angular.module('app');
 
 app.controller('TransportController', ['$scope', '$http', '$state', '$localStorage', function($scope, $http, $state, $localStorage) {
   $scope.student = "";
+  $scope.suggestionData = [];
+  $scope.suggestion = {};
+  $scope.toChangeList = [];
+
   $scope.checkLocal = function() {
     if($localStorage.userDetails) {
       $scope.app.user_details = $localStorage.userDetails;
@@ -13,12 +17,102 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
   }
   $scope.checkLocal();
 
+  $scope.reload = function() {
+    $state.reload();
+  }
+
   $scope.getRoutes = function() {
     $http.get($scope.app.apiURL + 'getAllRoutes').then(function(response) {
       $scope.transportData = response.data;
     }, function(x) {
       console.log(x.data.error);
     });
+  }
+
+
+  $scope.alterTransport = function(id) {
+
+      if($scope.toChangeList.indexOf(id)>-1)
+        $scope.toChangeList.splice(($scope.toChangeList.indexOf(id)));
+      else {
+        $scope.toChangeList.push(id);
+      }
+  }
+
+  $scope.changeTransport = function(ind, changeNote) {
+    var note;
+    console.log(changeNote);
+    switch (ind) {
+      case 0: note = "Postponed by " + changeNote;
+
+        break;
+      case 1 : note = "Preponed by " + changeNote;
+
+        break;
+      case 2 : note = "Cancelled " + changeNote;
+
+        break;
+      default: alert('Something went wrong, try again');
+               $state.reload();
+
+    }
+    console.log(changeNote);
+    if($scope.toChangeList.length) {
+      $http.post($scope.app.apiURL + 'alterTransport', {list : $scope.toChangeList, note : note}).then(function(response) {
+        $state.reload();
+      }, function(x) {
+        alert(x.data.error);
+      });
+    }
+    else {
+      alert('Please select a transport route');
+    }
+    // $scope.changeNote = "";
+  }
+
+  $scope.getSuggestions = function() {
+    $http.get($scope.app.apiURL + 'admin/suggestionView').then(function(response) {
+      $scope.suggestionData = response.data;
+      $scope.suggestionData.reverse();
+    }, function(x) {
+      console.log(x.data.error);
+    });
+  }
+
+  $scope.makeNote = function() {
+    document.getElementById('note').style.display = "block";
+  }
+
+  $scope.sendNote = function(id, route) {
+    $http.post($scope.app.apiURL + 'createSuggestion', {id : id, bus_route : route, note : $scope.note}).then(function(response) {
+      $state.reload();
+    }, function(x) {
+      console.log(x.data.error);
+    });
+  }
+
+  $scope.readAction = function(suggestion) {
+    $scope.noteData = "";
+    suggestion.readRecipient = true;
+    $http.post($scope.app.apiURL + 'readRecipient', {id : suggestion.id, }).then(function(response) {
+      $scope.noteData = response.data[0].note;
+    }, function(x) {
+      console.log(x.data.error);
+    });
+  }
+
+  $scope.action = function(suggestion) {
+    $scope.noteData = "";
+    $http.post($scope.app.apiURL + 'noteData', {id : suggestion.id}).then(function(response) {
+      $scope.noteData = response.data.note;
+    }, function(x) {
+      console.log(x.data.error);
+    });
+  }
+
+
+  $scope.gotoSuggestions = function() {
+    $state.go('adminSuggestions');
   }
 
   $scope.getStopPoints = function(id) {
@@ -47,7 +141,20 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
       $scope.view = "Board Points (By Route)"
     }
     document.getElementById('transportData').style.display = 'block';
-  }
+    }
+
+    $scope. goToYourSuggestions = function() {
+      $state.go('mySuggestions');
+    }
+
+    $scope.getMySuggestions = function() {
+      $http.post($scope.app.apiURL + 'student/suggestionView', {id : $scope.app.user_details.id}).then(function(response) {
+        $scope.suggestionData = response.data;
+      }, function(x) {
+        alert(x.data.error);
+        $state.go('myTransport');
+      });
+    }
 
   $scope.checkTransport = function() {
     $http.post($scope.app.apiURL + 'checkIfTransportExists', {id : $scope.app.user_details.id}).then(function(response) {

@@ -1,14 +1,25 @@
 <div ng-controller="TransportController" ng-init="checkTransport()">
   <div class="container">
     <div class="row">
+      <button type="button" name="button" class="pull-right" ng-click="goToYourSuggestions()">Your suggestions</button>
+    </div>
+    <div class="row">
       <div class="text-center">
         <p>Name : {{studentTransportData.profile_id.full_name}}</p>
         <p>Mobile Number : {{studentTransportData.profile_id.mobile_number}}</p>
         <p>Route : {{studentTransportData.bus_details.bus_route}}</p>
         <p>Boarding Point : {{studentTransportData.stop_details.boarding_point}}</p>
         <p>Boarding Time : {{studentTransportData.stop_details.boarding_time}}</p>
-        <p>Comments : {{studentTransportData.bus_details.comments}}</p>
+        <p>Status : {{studentTransportData.bus_details.comments}}</p>
         <button type="button" name="button" ng-click="goToViewTransport()"> View Bus routes</button>
+        <button type="button" name="button" ng-click="makeNote()">Create Suggestion</button>
+        <div id= "note" style="display : none" class="text-center">
+          <br>
+          <textarea rows="4" cols="50" ng-model="note">
+          </textarea>
+          <br>
+          <button type="button" name="button" ng-click="sendNote(studentTransportData.profile_id.id, studentTransportData.bus_details.bus_route)">Create Note</button>
+        </div>
       </div>
     </div>
   </div>

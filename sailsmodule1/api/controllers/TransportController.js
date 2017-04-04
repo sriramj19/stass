@@ -5,6 +5,7 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
+var _ = require('lodash');
 module.exports = {
 	createTransport : function(req, res) {
 		var transportInfo = req.allParams();
@@ -52,6 +53,40 @@ module.exports = {
 				return res.status(404).json({error : "transport not found"});
 			}
 		});
-	}
+	},
+
+	alterTransport : function(req, res) {
+		var idList = req.param('list');
+		_.forEach(idList, function(value) {
+			Transport.update({id : value}, {comments : req.param('note'), status : false}).exec(function(err, response) {
+				if(err)	return console.log(err);
+
+				if(!response.length) {
+					return res.status(404).json({error : "Something Went Wrong"});
+				}
+				else {
+					Bustransaction.find({bus_details : value}).populate('profile_id').exec(function(err, responseTransaction) {
+						if(err) return console.log(err);
+
+						if(responseTransaction.length) {
+							var emailData = [];
+							_.forEach(responseTransaction, function(value) {
+								emailData.push({name : value.profile_id.full_name, emailId : value.profile_id.email_id});
+							});
+							var confirmation = mailer.sendMail(emailData, response[0]);
+							console.log('verification', confirmation);
+						}
+						else {
+							console.log('Something went wrong');
+						}
+					});
+
+				}
+			});
+		});
+
+
+		return res.json({data : "Successful"});
+	},
 
 };

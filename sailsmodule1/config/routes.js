@@ -58,6 +58,7 @@ module.exports.routes = {
   'get /getAllRoutes'                       :'TransportController.getAllRoutes',
   'post /deactivateBus'                     :'TransportController.deactivateBus',
   'get /resetTransport'                     :'TransportController.resetTransport',
+  'post /alterTransport'                    :'TransportController.alterTransport',
 
 
 
@@ -77,5 +78,13 @@ module.exports.routes = {
   'post /updateFeeStatus'                   :'BustransactionController.updateFeeStatus',
 
   'post /cron/shiftInfoTransaction'         : 'BusinfoController.shiftI2T',
+
+
+  'post /createSuggestion'                  : 'SuggestionController.createSuggestion',
+  'get /admin/suggestionView'               : 'SuggestionController.adminSuggestionView',
+  'post /student/suggestionView'            : 'SuggestionController.studentSuggestionView',
+  'post /readRecipient'                     : 'SuggestionController.readRecipient',
+  'post /suggestionViewOne'                 : 'SuggestionController.suggestionViewOne',
+  'post /noteData'                          : 'SuggestionController.noteData',
 
 };

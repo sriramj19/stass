@@ -8,6 +8,7 @@ angular.module('app', [
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('/', '/login'),
+    $urlRouterProvider.when('', '/login'),
     // $urlRouterProvider.otherwise('/login'),
 
     $stateProvider.state('base', {
@@ -27,6 +28,20 @@ angular.module('app', [
         }
       }
     })
+
+    .state('mySuggestions', {
+        url: '/mySuggestions',
+        parent: 'base',
+        templateUrl: 'views/mySuggestions.html',
+        resolve: { mySuggestions: function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'app',
+            files: ['js/controllers/TransportController.js']
+          })
+        }
+      }
+    })
+
     .state('login', {
         url: '/login',
         parent: 'base',
@@ -45,6 +60,28 @@ angular.module('app', [
           return $ocLazyLoad.load({
             name: 'app',
             files: ['js/controllers/UsersController.js', 'js/landing.js']
+          })
+        }
+      }
+    })
+
+    .state('adminSuggestions', {
+        url: '/adminSuggestions',
+        parent: 'base',
+        templateUrl: 'views/adminSuggestions.html',
+        controller: function($scope, $state) {
+          if($scope.app.user_details) {
+            if($scope.app.user_details.admin) {
+            }
+            else {
+              $state.go('myTransport');
+            }
+          }
+        },
+        resolve: { adminSuggestions: function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            name: 'app',
+            files: ['js/controllers/TransportController.js']
           })
         }
       }
@@ -90,6 +127,11 @@ angular.module('app', [
           if(!$scope.app.user_details) {
             $state.go('login');
           }
+          // else if(!$scope.app.user_details.verified) {
+          //     alert('Please update your credentials');
+          //     $state.go('register');
+          //   }
+
         },
         resolve: { myTransport: function($ocLazyLoad) {
           return $ocLazyLoad.load({
@@ -107,6 +149,13 @@ angular.module('app', [
         controller : function($scope, $state) {
           if(!$scope.app.user_details) {
             $state.go('login');
+          }
+          else {
+            if(!$scope.app.user_details.verified) {
+              alert('Update your credentials');
+              $state.go('register');
+            }
+
           }
         },
         resolve: { enrollTransport: function($ocLazyLoad) {

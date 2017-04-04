@@ -14,6 +14,9 @@ angular.module('app')
       },
       profile : function() {
         $state.go('profile');
+      },
+      homepage : function() {
+        $state.go('login');
       }
 
     }

@@ -10,32 +10,43 @@
             <p class="lead">{{view}}</p>
           </div>
         </div>
-        <button type="button" name="button" ng-click="resetTransport()" class="pull-right">Reset</button>
+        <div class="pull-right">
+          <button type="button" name="button" ng-click="resetTransport()">Reset</button>
+          <button type="button" name="button" ng-click="gotoSuggestions()">View Suggestions</button>
+        </div>
+      </div>
+      <div class="pull-right" ng-if="!student">
+        <input type="text" name="note" placeholder="Time or note..." ng-model="changeNote">
+        <button type="button" name="postpone" ng-click="changeTransport(0, changeNote)">Postpone</button>
+        <button type="button" name="prepone" ng-click="changeTransport(1, changeNote)">Prepone</button>
+        <button type="button" name="cancel" ng-click="changeTransport(2, changeNote)">Terminate</button>
       </div>
     </div>
     <br>
     <div class="container" id="transportData" style="display:none">
       <div class="row">
         <div class="panel-group">
-          <div class="panel panel-default" ng-repeat="list in transportData">
-            <div class="panel-heading"><h4 class="panel-title"><a data-toggle="modal" data-target="#stops" href="" ng-click="getStopPoints(list.id)">{{list.bus_route}}</a><a ng-if="list.status" href="" ng-click="removeTransport(list.id)" class="glyphicon glyphicon-remove pull-right"></a></h4></div>
+          <div class="panel panel-default" ng-repeat="list in transportData"> <!--ng-click="removeTransport(list.id)"-->
+            <div class="panel-heading"><h4 class="panel-title"><a data-toggle="modal" data-target="#stops" href="" ng-click="getStopPoints(list.id)">{{list.bus_route}}{{check}}</a><input type="checkbox" ng-click="alterTransport(list.id)" ng-if="list.status && !student"  class="pull-right"></input></h4></div>
             <div class="modal fade" id="stops" role="dialog" ng-if="!student">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title text-center lead">{{list.bus_number}} : {{list.bus_route}}</h4>
+                    <h4 class="modal-title text-center lead">{{stopData[0].transport_id.bus_number}} : {{stopData[0].transport_id.bus_route}}</h4>
                   </div>
                   <div class="modal-body">
                     <table class="table table-striped">
                       <thead>
                         <tr>
+                          <th>S.no.</th>
                           <th>Board Point</th>
                           <th>Normal Boarding Time</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr ng-repeat="stop in stopData">
+                          <td>{{$index+1}}</td>
                           <td>{{stop.boarding_point}}</td>
                           <td>{{stop.boarding_time}}</td>
                         </tr>
@@ -50,12 +61,13 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title text-center lead">{{list.bus_number}} : {{list.bus_route}}</h4>
+                    <h4 class="modal-title text-center lead">{{stopData[0].transport_id.bus_number}} : {{stopData[0].transport_id.bus_route}}</h4>
                   </div>
                   <div class="modal-body">
                     <table class="table table-striped">
                       <thead>
                         <tr>
+                          <th>S.no.</th>
                           <th>Student Name</th>
                           <th>Mobile Number</th>
                           <th>Boarding Point</th>
@@ -63,6 +75,7 @@
                       </thead>
                       <tbody>
                         <tr ng-repeat="stop in studentData">
+                          <td>{{$index +  1}}</td>
                           <td>{{stop.profile_id.full_name}}</td>
                           <td>{{stop.profile_id.mobile_number}}</td>
                           <td>{{stop.bus_id.boarding_point}}</td>

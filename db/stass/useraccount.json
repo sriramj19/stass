@@ -113,10 +113,10 @@
     "full_name" : "PRASANNA V", 
     "mobile_number" : "9486350949", 
     "email_id" : "prasanna261387@gamil.com", 
-    "verified" : "true", 
+    "verified" : true, 
     "admin" : false, 
     "createdAt" : ISODate("2017-02-21T05:05:23.516+0000"), 
-    "updatedAt" : ISODate("2017-02-21T05:05:23.516+0000")
+    "updatedAt" : ISODate("2017-04-02T17:01:17.318+0000")
 }
 { 
     "_id" : ObjectId("58abcad48110d0341b01da04"), 
@@ -383,14 +383,14 @@
     "updatedAt" : ISODate("2017-02-21T05:36:11.873+0000")
 }
 { 
-    "_id" : ObjectId("58bec39fd7570d68176649b8"), 
+    "_id" : ObjectId("58c783c897f4b67806486b71"), 
     "roll_number" : "13BCS286", 
     "password" : "13bcs286", 
     "admin" : false, 
     "verified" : true, 
-    "createdAt" : ISODate("2017-03-07T14:28:47.546+0000"), 
-    "updatedAt" : ISODate("2017-03-10T12:39:58.622+0000"), 
+    "createdAt" : ISODate("2017-03-14T05:46:48.326+0000"), 
+    "updatedAt" : ISODate("2017-03-14T05:56:51.448+0000"), 
     "full_name" : "Sivedha", 
-    "email_id" : "sivedham@gmail.com", 
-    "mobile_number" : "9653214569"
+    "email_id" : "sivedha@gmail.com", 
+    "mobile_number" : "9456325214"
 }
