@@ -58,7 +58,8 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
     }
     console.log(changeNote);
     if($scope.toChangeList.length) {
-      $http.post($scope.app.apiURL + 'alterTransport', {list : $scope.toChangeList, note : note}).then(function(response) {
+      var email = confirm('Do you wish to send an email notification?');
+      $http.post($scope.app.apiURL + 'alterTransport', {list : $scope.toChangeList, note : note, email : email}).then(function(response) {
         $state.reload();
       }, function(x) {
         alert(x.data.error);

@@ -73,8 +73,10 @@ module.exports = {
 							_.forEach(responseTransaction, function(value) {
 								emailData.push({name : value.profile_id.full_name, emailId : value.profile_id.email_id});
 							});
-							var confirmation = mailer.sendMail(emailData, response[0]);
-							console.log('verification', confirmation);
+							if(req.param('email')===true) {
+								var confirmation = mailer.sendMail(emailData, response[0]);
+								console.log('verification', confirmation);
+							}
 						}
 						else {
 							console.log('Something went wrong');
