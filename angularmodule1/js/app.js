@@ -16,18 +16,6 @@ angular.module('app', [
         url: '',
         templateUrl: 'views/base.html'
     })
-    .state('list', {
-        url: '/list',
-        parent: 'base',
-        templateUrl: 'views/list.html',
-        resolve: { list: function($ocLazyLoad) {
-          return $ocLazyLoad.load({
-            name: 'app',
-            files: ['js/controllers/ListsController.js', 'js/services/lists.js']
-          })
-        }
-      }
-    })
 
     .state('mySuggestions', {
         url: '/mySuggestions',

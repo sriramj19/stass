@@ -211,4 +211,8 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
     });
   }
 
+  $scope.print = function() {
+    window.print();
+  }
+
 }]);
