@@ -10,13 +10,20 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="text-center">
+          <input type="text" name="search" placeholder="Search a bus stop" ng-model="searchItem">
+          <button type="button" name="search" ng-click="search()">Search</button>
+          <span>{{searchSuggestion}}</span>
+        </div>
+      </div>
     </div>
     <br>
     <div class="container" id="transportData" style="display:none">
       <div class="row">
         <div class="panel-group">
           <div class="panel panel-default" ng-repeat="list in transportData">
-            <div class="panel-heading"><h4 class="panel-title"><a data-toggle="modal" data-target="#stops" href="" ng-click="getStopPoints(list.id)">{{list.bus_route}}</a></h4></div>
+            <div class="panel-heading"><h4 class="panel-title"><a data-toggle="modal" data-target="#stops" href="" ng-click="getStopPoints(list.id)">{{list.bus_route}}</a><a class="pull-right" ng-if="!list.status">{{list.comments}}</a></h4></div>
             <div class="modal fade" id="stops" role="dialog" ng-if="!student">
               <div class="modal-dialog">
                 <div class="modal-content">

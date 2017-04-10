@@ -57,11 +57,17 @@ module.exports = {
 	},
 
 	readRecipient : function(req, res) {
-		Suggestion.update({id : req.param('id')}, {readRecipient : true}).exec(function(err, response) {
+		Suggestion.update({id : req.param('id')}, {readRecipient : true}).exec(function(err, responseData) {
 			if(err)	return console.log(err);
 
-			if(response.length) {
-				return res.json(response);
+			if(responseData.length) {
+        Suggestion.findOne({id : req.param('id')}).populate('profile_id').exec(function(err, response) {
+          if(err) return console.log(err);
+
+          if(response) {
+            return res.json(response);
+          }
+        });
 			}
 			else {
 				return res.status(404).json({error : "No such suggestion exists"});
@@ -81,5 +87,18 @@ module.exports = {
 			}
 		});
 	},
+
+  approve : function(req, res) {
+    Suggestion.update({id : req.param('id')}, {approved : true}).exec(function(err, response) {
+      if(err) return console.log(err);
+
+      if(response.length) {
+        return res.json(response);
+      }
+      else {
+        return res.status(404).json({error : "Something went wrong"});
+      }
+    });
+  }
 
  };

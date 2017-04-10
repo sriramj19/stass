@@ -20,6 +20,10 @@ module.exports = {
     readRecipient : {
       type : 'boolean',
       defaultsTo : 'false'
+    },
+    approved : {
+      type : 'boolean',
+      defaultsTo : 'false'
     }
   }
 };

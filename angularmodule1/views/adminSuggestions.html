@@ -3,7 +3,7 @@
     <div id="suggestionData">
       <div class="row">
         <div class="text-center">
-          <h3 class="lead">Suggestions</h3>
+          <h3 class="lead">Suggestions or Requests</h3>
         </div>
       </div>
       <div class="row">
@@ -26,13 +26,14 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title text-center lead">Full Name : {{suggestion.profile_id.full_name}}</h4>
+                    <h4 class="modal-title text-center lead">Full Name : {{studentName}}</h4>
+                    <a href="" ng-if="!approved" class="pull-right" ng-click="approve(id)">Approve</a>
                   </div>
                   <div class="modal-body">
                     <h5 text-center>{{noteData}}</h3>
                   </div>
                   <div class="model-footer">
-                    <h4 class="lead text-center">Bus Route : {{suggestion.bus_route}}</h4>
+                    <h4 class="lead text-center">Bus Route : {{bus}}</h4>
                   </div>
                 </div>
               </div>

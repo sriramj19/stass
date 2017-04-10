@@ -21,6 +21,12 @@ module.exports = {
     comments : {
       type : 'string',
       defaultsTo : 'No comments'
+    },
+    driverDetails : {
+      type : 'json'
+    },
+    alternateTransport : {
+      type : 'array'
     }
 
   }

@@ -59,12 +59,14 @@ module.exports.routes = {
   'post /deactivateBus'                     :'TransportController.deactivateBus',
   'get /resetTransport'                     :'TransportController.resetTransport',
   'post /alterTransport'                    :'TransportController.alterTransport',
+  'put /modifyTransport'                    :'TransportController.modifyTransport',
 
 
 
   'post /createBoardPoint'                  :'StoppointController.createBoardPoint',
   'post /findBoardPoint'                    :'StoppointController.findBoardPoint',
   'post /getAllStopPoints'                 :'StoppointController.getAllStopPoints',
+  'post /search'                            : 'StoppointController.searchBoardPoint',
 
 
 
@@ -86,5 +88,7 @@ module.exports.routes = {
   'post /readRecipient'                     : 'SuggestionController.readRecipient',
   'post /suggestionViewOne'                 : 'SuggestionController.suggestionViewOne',
   'post /noteData'                          : 'SuggestionController.noteData',
+  'post /approve'                           : 'SuggestionController.approve',
+
 
 };

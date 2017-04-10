@@ -11,6 +11,14 @@
         <p>Boarding Point : {{studentTransportData.stop_details.boarding_point}}</p>
         <p>Boarding Time : {{studentTransportData.stop_details.boarding_time}}</p>
         <p>Status : {{studentTransportData.bus_details.comments}}</p>
+        <p>Driver Name : {{studentTransportData.bus_details.driverDetails.name}}</p>
+        <p>Driver Number : {{studentTransportData.bus_details.driverDetails.number}}</p>
+        <div class="text-center" ng-if="!studentTransportData.bus_details.status">
+        <span>Alternate buses you could use : </span><br>
+        <ul>
+          <li style="display: inline" class="text-center" ng-repeat="bus in studentTransportData.bus_details.alternateTransport">{{$index+1}}.{{bus}} </li>
+        </ul>
+        </div>
         <button type="button" name="button" ng-click="goToViewTransport()"> View Bus routes</button>
         <button type="button" name="button" ng-click="makeNote()">Create Suggestion</button>
         <div id= "note" style="display : none" class="text-center">

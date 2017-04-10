@@ -9,6 +9,13 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="text-center">
+          <input type="text" name="search" placeholder="Search a bus stop" ng-model="searchItem">
+          <button type="button" name="search" ng-click="search()">Search</button>
+          <span>{{searchSuggestion}}</span>
+        </div>
+      </div>
     </div>
     <br>
     <div class="container" id="transportData">

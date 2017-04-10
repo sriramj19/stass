@@ -91,4 +91,17 @@ module.exports = {
 		return res.json({data : "Successful"});
 	},
 
+	modifyTransport : function(req, res) {
+		Transport.update({id : req.param('id')}, req.allParams()).exec(function(err, response) {
+			if(err)	return console.log(err);
+
+			if(response.length) {
+				return res.json(response);
+			}
+			else {
+				return res.status(404).json({error : "Something went wrong"});
+			}
+		});
+	},
+
 };

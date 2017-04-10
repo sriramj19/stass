@@ -25,6 +25,18 @@ module.exports = {
 			}
 		});
 	},
+	searchBoardPoint: function(req, res) {
+		Stoppoint.find({boarding_point : {contains : req.param('search')}}).populate('transport_id').exec(function(err, response) {
+			if(err)	return console.log(err);
+
+			if(response.length) {
+				return res.json(response);
+			}
+			else {
+				return res.status(404).json({error : "Boarding Point not found"});
+			}
+		});
+	},
 	getAllStopPoints : function(req, res) {
 		Stoppoint.find({transport_id : req.param('id')}).populate('transport_id').exec(function(err, response) {
 			if(err)	return console.log(err);

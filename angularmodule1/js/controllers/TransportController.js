@@ -7,6 +7,7 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
   $scope.suggestionData = [];
   $scope.suggestion = {};
   $scope.toChangeList = [];
+  $scope.addTrue = false;
 
   $scope.checkLocal = function() {
     if($localStorage.userDetails) {
@@ -94,9 +95,15 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
 
   $scope.readAction = function(suggestion) {
     $scope.noteData = "";
+    $scope.studentName = "";
+    $scope.bus ="";
     suggestion.readRecipient = true;
-    $http.post($scope.app.apiURL + 'readRecipient', {id : suggestion.id, }).then(function(response) {
-      $scope.noteData = response.data[0].note;
+    $http.post($scope.app.apiURL + 'readRecipient', {id : suggestion.id }).then(function(response) {
+      $scope.noteData = response.data.note;
+      $scope.studentName = response.data.profile_id.full_name;
+      $scope.bus = response.data.bus_route;
+      $scope.approved = response.data.approved;
+      $scope.id = response.data.id;
     }, function(x) {
       console.log(x.data.error);
     });
@@ -116,7 +123,40 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
     $state.go('adminSuggestions');
   }
 
+  $scope.routeCreator = function() {
+    $scope.createRoute.alternateTransport = [];
+    $scope.createRoute.alternateTransport.push($scope.AR1, $scope.AR2, $scope.AR3);
+    $http.post($scope.app.apiURL + 'createTransport', $scope.createRoute).then(function(response) {
+      if(response.data) {
+        location.reload();
+      }
+    });
+  }
+
+  $scope.addPoint = function(bp, bt) {
+    $scope.pointDetails = {
+      boarding_point : bp,
+      boarding_time : bt,
+      transport_id : $scope.globalId
+    };
+    console.log($scope.pointDetails);
+    if($scope.addTrue) {
+      $http.post($scope.app.apiURL + 'createBoardPoint', $scope.pointDetails).then(function(response) {
+        if(response.data) {
+          location.reload();
+        }
+      }, function(x) {
+        console.log(x.data.error);
+      });
+    }
+    else {
+      $scope.addTrue = true;
+    }
+  }
+
   $scope.getStopPoints = function(id) {
+    $scope.globalId = id;
+    $scope.stopData = [];
     if($scope.student) {
       $http.post($scope.app.apiURL + 'getAllStudentsTravels', {id : id}).then(function(response) {
         $scope.studentData = response.data;
@@ -178,7 +218,7 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
     var flag = confirm('Do you wish to continue?');
     if(flag) {
       $http.post($scope.app.apiURL + 'signupForTransport', {profile_id : $scope.app.user_details.id, bus_details : stop.transport_id, stop_details : stop.id}).then(function(response) {
-        alert('payFee');
+        alert('Please pay the transport fee and ask the office to update your account status');
       }, function(x) {
         console.log(x.data.error);
       });
@@ -213,6 +253,37 @@ app.controller('TransportController', ['$scope', '$http', '$state', '$localStora
 
   $scope.print = function() {
     window.print();
+  }
+
+  $scope.search = function() {
+    $scope.searchSuggestion = "";
+    if($scope.searchItem) {
+      $http.post($scope.app.apiURL + 'search', {search : $scope.searchItem}).then(function(response) {
+        if(response.data.length) {
+          $scope.searchSuggestion = "Check in the routes : ";
+          var i = 1;
+          _.forEach(response.data, function(value) {
+            $scope.searchSuggestion+= i + "." + value.transport_id.bus_route + " ";
+            i++;
+          });
+        }
+        else {
+          $scope.searchSuggestion = "Sorry, couldn't seem to land on a bus route.";
+        }
+      }, function(x) {
+        $scope.searchSuggestion = "Sorry, couldn't seem to land on a bus route.";
+      });
+    }
+  }
+
+  $scope.approve = function(id) {
+    $http.post($scope.app.apiURL + 'approve', {id : id}).then(function(response) {
+      if(response.data) {
+        console.log('Approved');
+      }
+    }, function(x) {
+      console.log('Something went wrong');
+    });
   }
 
 }]);

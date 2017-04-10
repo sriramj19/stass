@@ -11,9 +11,39 @@
           </div>
         </div>
         <div class="pull-right">
+          <button type="button" name="button" data-toggle="modal" data-target="#routeAdd">Add Route</button>
+          <div class="modal fade" id="routeAdd" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Add New Route</h4>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <input type="text" name="" value="" placeholder="Route number" class="form-control" ng-model="createRoute.bus_number">
+                    <input type="text" name="" value="" placeholder="Route name" class="form-control" ng-model="createRoute.bus_route">
+                    <input type="text" name="" value="" placeholder="Driver name" class="form-control" ng-model="createRoute.driverDetails.name">
+                    <input type="text" name="" value="" placeholder="Driver number" class="form-control" ng-model="createRoute.driverDetails.number">
+                    <input type="text" name="" value="" placeholder="Alternate Route 1" class="form-control" ng-model="AR1">
+                    <input type="text" name="" value="" placeholder="Alternate Route 2" class="form-control" ng-model="AR2">
+                    <input type="text" name="" value="" placeholder="Alternate Route 3" class="form-control" ng-model="AR3">
+                  </form>
+                  <div class="text-center">
+                    <button type="button" name="button" ng-click="routeCreator()">ADD</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <button type="button" name="button" ng-click="resetTransport()">Reset</button>
           <button type="button" name="button" ng-click="gotoSuggestions()">View Suggestions</button>
         </div>
+      </div>
+      <div class="pull-left">
+        <input type="text" name="search" placeholder="Search a bus stop" ng-model="searchItem">
+        <button type="button" name="search" ng-click="search()">Search</button>
+        <span>{{searchSuggestion}}</span>
       </div>
       <div class="pull-right" ng-if="!student">
         <input type="text" name="note" placeholder="Time or note..." ng-model="changeNote">
@@ -27,13 +57,21 @@
       <div class="row">
         <div class="panel-group">
           <div class="panel panel-default" ng-repeat="list in transportData"> <!--ng-click="removeTransport(list.id)"-->
-            <div class="panel-heading"><h4 class="panel-title"><a data-toggle="modal" data-target="#stops" href="" ng-click="getStopPoints(list.id)">{{list.bus_route}}{{check}}</a><input type="checkbox" ng-click="alterTransport(list.id)" ng-if="list.status && !student"  class="pull-right"></input></h4></div>
+            <div class="panel-heading"><h4 class="panel-title"><a data-toggle="modal" data-target="#stops" href="" ng-click="getStopPoints(list.id)">{{list.bus_route}}{{check}}</a><a ng-if="!list.status && !student" class="pull-right">{{list.comments}}</a><input type="checkbox" ng-click="alterTransport(list.id)" ng-if="list.status && !student"  class="pull-right"></input></h4></div>
             <div class="modal fade" id="stops" role="dialog" ng-if="!student">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title text-center lead">{{stopData[0].transport_id.bus_number}}  {{stopData[0].transport_id.bus_route}}</h4>
+                    <div class="pull-left" ng-if="!addTrue">
+                      <button type="button" name="button" ng-click="addPoint()">Add Stop</button>
+                    </div>
+                    <div class="pull-left" ng-if="addTrue">
+                      <input type="text" name="" placeholder="Enter Board Point" ng-model="bp">
+                      <input type="text" name="" placeholder="Enter Boarding Time" ng-model="bt">
+                      <button type="button" name="button" class="pull-right" ng-click="addPoint(bp, bt)">Add Stop</button>
+                    </div>
                   </div>
                   <div class="modal-body">
                     <table class="table table-striped">
